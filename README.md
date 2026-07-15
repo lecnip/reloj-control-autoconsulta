@@ -57,7 +57,7 @@ Esta pestaña calculará de forma lógica si tus días están completos o si te 
 1. En tu Google Sheets, ve a **Extensiones** > **Apps Script**.
 2. Borra el código por defecto y pega el código del archivo `codigo.js` de este repositorio.
 3. Ajusta las variables de configuración en la constante `CONFIG` (remitente y asunto del correo del reloj de tu institución).
-4. Haz clic en **Guardar** (💾) y presiona **Ejecutar** (▶️).
+4. Haz clic en **Guardar**  y presiona **Ejecutar** 
 5. Otorga los permisos de seguridad necesarios en tu cuenta de Google.
 
 ---
@@ -78,7 +78,5 @@ Para que el proceso funcione solo en segundo plano:
 
 ---
 
-## 🌟 Contribuciones e Impacto
-Este proyecto es de código abierto. Si encuentras mejoras en las expresiones regulares para leer correos de otros proveedores de reloj control, ¡siéntete libre de abrir un Pull Request! 
-
-¡Esperamos que esta automatización alivie la carga mental de muchos trabajadores y optimice sus procesos de asistencia diaria!
+## Contribuciones e Impacto
+Este proyecto es de código abierto. 
