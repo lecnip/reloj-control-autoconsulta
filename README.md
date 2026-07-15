@@ -1,12 +1,10 @@
 # reloj-control-autoconsulta
 Sistema automatizado para el control de marcas de asistencia (reloj control) mediante Google Suite.
-# 🕒 Autoconsulta y Alerta de Reloj Control (Google Suite)
+# Autoconsulta y Alerta de Reloj Control (Google Suite)
 
 Este proyecto nace para resolver un problema común en el ámbito laboral y de la administración pública: la carga diaria de trabajo impide estar atentos a los correos verificadores de marcación de asistencia, lo que suele derivar en marcas faltantes u olvidadas que luego requieren justificaciones formales (memorándums).
 
 Esta solución **100% automatizada y gratuita** utiliza las herramientas de la suite institucional de Google (Gmail, Sheets, Apps Script y Looker Studio) para leer tu bandeja de entrada, estructurar tus registros de entrada/salida y avisarte visualmente si te falta alguna marca.
-
----
 
 ## 🛠️ Arquitectura del Sistema
 
@@ -15,8 +13,6 @@ Esta solución **100% automatizada y gratuita** utiliza las herramientas de la s
 3. **Google Sheets:** Funciona como base de datos y genera una hoja de control lógico diario para contrastar marcas.
 4. **Google Looker Studio:** Un panel visual interactivo (Dashboard) donde puedes ver tus días trabajados y un cuadro de alertas de marcas faltantes.
 
----
-
 ## 📋 Requisitos Previos
 
 Tener una cuenta institucional de Google Workspace con acceso a:
@@ -24,8 +20,6 @@ Tener una cuenta institucional de Google Workspace con acceso a:
 * Google Drive (Sheets)
 * Google Apps Script
 * Google Looker Studio
-
----
 
 ## 🚀 Guía de Instalación Paso a Paso
 
@@ -51,8 +45,6 @@ Esta pestaña calculará de forma lógica si tus días están completos o si te 
 
 *(Recuerda arrastrar las fórmulas de B2, C2 y D2 hacia abajo para cubrir tus filas).*
 
----
-
 ### Paso 2: Implementar el Script
 1. En tu Google Sheets, ve a **Extensiones** > **Apps Script**.
 2. Borra el código por defecto y pega el código del archivo `codigo.js` de este repositorio.
@@ -60,23 +52,17 @@ Esta pestaña calculará de forma lógica si tus días están completos o si te 
 4. Haz clic en **Guardar**  y presiona **Ejecutar** 
 5. Otorga los permisos de seguridad necesarios en tu cuenta de Google.
 
----
-
 ### Paso 3: Automatizar la lectura (Activador)
 Para que el proceso funcione solo en segundo plano:
 1. Dentro de Apps Script, ve al menú lateral izquierdo y haz clic en el reloj (**Activadores**).
 2. Haz clic en **+ Añadir activador** (abajo a la derecha).
 3. Configúralo con un evento "Según tiempo", de tipo "Temporizador por horas" y que se ejecute "Cada hora".
 
----
-
 ### Paso 4: Diseñar tu Reporte en Looker Studio
 1. Entra a [Looker Studio](https://lookerstudio.google.com/) y crea un informe vacío.
 2. Conéctalo a tu hoja de cálculo `registro de marcaciones`.
 3. Añade la pestaña `Hoja 1` para tu bitácora de marcas y la pestaña `Control_Diario` para generar alertas.
 4. En la tabla de alertas de Looker Studio, aplica un **Filtro** para **Excluir** las filas donde el campo `Estado del Día` sea igual a `Completo`. ¡Así solo verás en pantalla tus marcas olvidadas!
-
----
 
 ## Contribuciones e Impacto
 Este proyecto es de código abierto. 
